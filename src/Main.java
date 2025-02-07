@@ -29,6 +29,8 @@ public class Main {
         camisetaVerano.displayInformation();
 
         // Ejercicio 4
+
+        /**
         System.out.println("\n----Ejercicio 4----");
         Coche coche = new Coche();
         int opcion;
@@ -68,7 +70,17 @@ public class Main {
                     System.out.println("Error! Introduce una opción entre 1-4.");
             }
         } while (opcion != 4);
+         **/
+
+        // Ejercicio 5
+        System.out.println("\n----Ejercicio 5----");
+        StringBuilder frase = new StringBuilder("Dot saw I was Tod"); // instanciar clase StringBuilder
+        System.out.println("La frase es: " + frase +
+                           "\nEl palíndrome es: " + frase.reverse());
+
+
     }
+
     public static double introducirVelocidad (String mensaje) {
         System.out.println(mensaje);
 
