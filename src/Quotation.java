@@ -27,6 +27,7 @@ public class Quotation {
         return author;
     }
 
+    // Método para printear los attr
     public void display(){
         System.out.println("Quote: " + this.getQuote());
         System.out.println("Author: " + this.getAuthor());
