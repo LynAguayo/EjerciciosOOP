@@ -58,11 +58,11 @@ public class Shirt {
 
     // Método para mostrar los attributos
     public void displayInformation() {
-        System.out.println("ShirtID: " + getShirtID() +
-                           "\nDescription: " + getDescription() +
-                           "\nSize: " + getSize() +
-                           "\nPrice: " + getPrice() +
-                           "\nQuantityInStock: "+getQuantityInStock());
+        System.out.println("TShirt {ShirtID: " + getShirtID() +
+                           ", Description: " + getDescription() +
+                           ", Size: " + getSize() +
+                           ", Price: " + getPrice() +
+                           ", QuantityInStock: "+getQuantityInStock() + "}");
     }
 
     // Método para incrementar el valor del atributo quantityInStock
