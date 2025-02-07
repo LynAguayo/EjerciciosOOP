@@ -1,4 +1,7 @@
+import java.util.Scanner;
+
 public class Main {
+    private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
         System.out.println("Bienvenido!!\uD83D\uDE04");
@@ -25,5 +28,58 @@ public class Main {
         camisetaVerano.setPrice(15); // cambiar el precio
         camisetaVerano.displayInformation();
 
+        // Ejercicio 4
+        System.out.println("\n----Ejercicio 4----");
+        Coche coche = new Coche();
+        int opcion;
+
+        do {
+            System.out.println("\n[1] Accelerar" +
+                               "\n[2] Frenar" +
+                               "\n[3] Imprimir Velocidad" +
+                               "\n[4] Salir" +
+                               "\nIntroduce una opción: ");
+
+            while  (!scanner.hasNextInt()){
+                System.out.println("Error! Introduce un integer.");
+                scanner.next();
+            }
+
+            opcion = scanner.nextInt(); // leer el número
+            scanner.nextLine();
+
+            switch (opcion){
+                case 1:
+                    double incremento = introducirVelocidad("Has seleccionado accelerar. Introduce el incremento de velocidad: ");
+                    coche.acelerar(incremento);
+                    break;
+                case 2:
+                    double disminucion = introducirVelocidad("Has seleccionado frenar. Introduce la reducción de velocidad: ");
+                    coche.frenar(disminucion);
+                    break;
+                case 3:
+                    System.out.println("Has seleccionado imprimir.");
+                    coche.display();
+                    break;
+                case 4:
+                    System.out.println("Saliendo del programa... Bye!!\uD83D\uDEAA");
+                    break;
+                default:
+                    System.out.println("Error! Introduce una opción entre 1-4.");
+            }
+        } while (opcion != 4);
+    }
+    public static double introducirVelocidad (String mensaje) {
+        System.out.println(mensaje);
+
+        while (!scanner.hasNextDouble()) {
+            System.out.println("Error! Introduce un numero, por favor.");
+            scanner.next();
+        }
+
+        double velocidad = scanner.nextDouble();
+        scanner.nextLine();
+
+        return velocidad;
     }
 }
