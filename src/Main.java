@@ -78,6 +78,9 @@ public class Main {
         System.out.println("La frase es: " + frase +
                            "\nEl palíndrome es: " + frase.reverse());
 
+        // Ejercicio 6
+        System.out.println("\n----Ejercicio 6----");
+
 
     }
 
